@@ -1,5 +1,5 @@
-from calculator.calculation import Calculation as calc
-
+from app.calculator.calculation import Calculation as calc
+from typing import List as list
 class Calculator_History:
     log: list[calc] = []
 

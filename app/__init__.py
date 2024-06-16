@@ -19,7 +19,7 @@ class App:
         self.command_handler.register_command("subtract", SubtractCommand())
         self.command_handler.register_command("menu", MenuCommand())
         self.command_handler.register_command("exit", ExitCommand())
-
+        self.command_handler.execute_command("menu")
         print("Type 'exit' to exit.")
         while True:  #REPL Read, Evaluate, Print, Loop
             self.command_handler.execute_command(input(">>> ").strip())

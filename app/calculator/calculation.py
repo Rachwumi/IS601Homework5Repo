@@ -1,4 +1,4 @@
-from calculator.arithematic import add, subtract, divide, multiply
+from app.calculator.arithematic import add, subtract, divide, multiply
 from decimal import Decimal
 
 class Calculation:
