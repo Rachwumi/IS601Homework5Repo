@@ -1,3 +1,4 @@
+from multiprocessing import Process
 from abc import ABC, abstractmethod
 
 class Command(ABC):
@@ -19,11 +20,13 @@ class CommandHandler:
         else:
             print(f"No such command: {command_name}")
         """
-        """Easier to ask for forgiveness than permission (EAFP) - Use when its going to most likely work"""
-        try:
-            if command_name == "menu":
-                self.commands[command_name].execute(self.commands)
-            else:
-                self.commands[command_name].execute()
-        except KeyError:
+        if command_name == "menu":
+            Process(target=self.commands[command_name].execute(self.commands)).start()
+        elif command_name == "exit":
+          self.commands[command_name].execute()
+        elif command_name in self.commands:
+            int1 = input("Please type your first decimal >>> ")
+            int2 = input("Please type your second decimal >>> ")
+            Process(target=self.commands[command_name].execute(int1,int2)).start()
+        else:
             print(f"No such command: {command_name}")

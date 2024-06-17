@@ -55,7 +55,7 @@ def test_error_app_subtract_command(capfd, monkeypatch):
     with pytest.raises(SystemExit):
         app.start()  # Assuming App.start() is now a static method based on previous discussions
     captured = capfd.readouterr()
-    assert 'Please type in Decimal format: 2.0, 1.5, 18.0' in captured.out
+    assert 'Please type in Decimal or Integer format: 2.0, 1.5, 18' in captured.out
 
 def test_error_app_divide_command(capfd, monkeypatch):
     """Test that the REPL correctly handles the error 'divide' command."""
@@ -66,7 +66,7 @@ def test_error_app_divide_command(capfd, monkeypatch):
     with pytest.raises(SystemExit):
         app.start()  # Assuming App.start() is now a static method based on previous discussions
     captured = capfd.readouterr()
-    assert 'Please type in Decimal format: 2.0, 1.5, 18.0' in captured.out
+    assert 'Please type in Decimal or Integer format: 2.0, 1.5, 18' in captured.out
 
 def test_error_app_multiply_command(capfd, monkeypatch):
     """Test that the REPL correctly handles the error 'multiply' command."""
@@ -77,7 +77,7 @@ def test_error_app_multiply_command(capfd, monkeypatch):
     with pytest.raises(SystemExit):
         app.start()  # Assuming App.start() is now a static method based on previous discussions
     captured = capfd.readouterr()
-    assert 'Please type in Decimal format: 2.0, 1.5, 18.0' in captured.out
+    assert 'Please type in Decimal or Integer format: 2.0, 1.5, 18' in captured.out
 
 def test_error_app_add_command(capfd, monkeypatch):
     """Test that the REPL correctly handles the error 'add' command."""
@@ -88,7 +88,7 @@ def test_error_app_add_command(capfd, monkeypatch):
     with pytest.raises(SystemExit):
         app.start()  # Assuming App.start() is now a static method based on previous discussions
     captured = capfd.readouterr()
-    assert 'Please type in Decimal format: 2.0, 1.5, 18.0' in captured.out
+    assert 'Please type in Decimal or Integer format: 2.0, 1.5, 18' in captured.out
 
 def test_app_menu_command(capfd, monkeypatch):
     """Test that the REPL correctly handles the 'greet' command."""
