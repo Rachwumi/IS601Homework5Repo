@@ -1,7 +1,7 @@
 '''My Arithematic Test'''
 from decimal import Decimal
 import pytest
-from calculator.arithematic import add, subtract, multiply, divide
+from app.calculator.arithematic import add, subtract, multiply, divide
 
 def test_faker(int1, int2, operation, expected):
     ''' Testing the add, multiply, divide, and subtract arithematic'''

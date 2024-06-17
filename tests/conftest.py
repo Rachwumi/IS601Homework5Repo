@@ -3,7 +3,7 @@
 from decimal import Decimal
 import pytest
 from faker import Faker
-from calculator.arithematic import add, subtract, multiply, divide
+from app.calculator.arithematic import add, subtract, multiply, divide
 
 fake = Faker()
 
