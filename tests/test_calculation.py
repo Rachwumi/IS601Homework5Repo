@@ -1,5 +1,5 @@
 '''My Calculcation Test'''
-from calculator.calculation import Calculation
+from app.calculator.calculation import Calculation
 
 def test_performcalc(int1,int2, operation, expected):
     '''
