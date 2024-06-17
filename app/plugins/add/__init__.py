@@ -3,11 +3,9 @@ from app.commands import Command
 from app.calculator import Calculator
 
 class AddCommand(Command):
-    def execute(self):
+    def execute(self, i1, i2):
         try:
-            int1 = input("Please type your first decimal >>> ")
-            int2 = input("Please type your second decimal >>> ")
-            result = Calculator.subtract( Decimal(int1), Decimal(int2) , 'add')
-            print(f"The value of", int1, "+",int2, "is equal to",result)
+            result = Calculator.subtract( Decimal(i1), Decimal(i2) , 'add')
+            print(f"The value of", i1, "+",i2, "is equal to",result)
         except Exception:
-            print('Please type in Decimal format: 2.0, 1.5, 18.0')
+            print('Please type in Decimal or Integer format: 2.0, 1.5, 18')

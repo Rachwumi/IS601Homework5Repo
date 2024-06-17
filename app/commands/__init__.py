@@ -23,7 +23,11 @@ class CommandHandler:
         try:
             if command_name == "menu":
                 self.commands[command_name].execute(self.commands)
-            else:
+            elif command_name == "exit":
                 self.commands[command_name].execute()
+            else:
+                int1 = input("Please type your first decimal >>> ")
+                int2 = input("Please type your second decimal >>> ")
+                self.commands[command_name].execute(int1,int2)
         except KeyError:
             print(f"No such command: {command_name}")
